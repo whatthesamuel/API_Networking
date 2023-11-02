@@ -1,4 +1,4 @@
-# Universal API-Based Multiplayer Concept
+# Standardized API-Based Networking Protocol for communication between different engines
     
  I have been thinking about this concept for a while. Currently, if you want to make a multiplayer game with Unreal, you need a server(or a host), and clients all made with unreal. Same goes for Gamemaker, and although I haven't digged deep into networking in Unity, I assume it would be similar.
     
@@ -8,10 +8,16 @@
     
 ----
 
-### Repository Explanation
-    
+### Documentation
+
+
+#### Folders
  API_Concept_Server contains the server project, written in python. You have to run this first.
  API_Concept_Godot contains the game project, made with Godot. You can run the project in the editor and check the output to see what's going on.
  API_Concept_Client contains the client project, written in python. This proves that this concept can be applied to other programs/applications that doesn't use game engines as well.
+
+#### Theoretical Usage
+ Communication can be done using json-like(or just plain json) packets. There should be an agreement for a set standard for which data to put in the packets(in the example, only 'name' key is present to make it simple).
+ Since Json is pretty easy to encode/decode in various engines and platforms, it would allow easy communication between different environments.
 
 I would like to include Unreal/Unity projects as well, but for now, I think this is enough to prove my point. I'll add other game engines later when I can make some time.
